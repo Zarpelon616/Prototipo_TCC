@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Protótipo - Sidebar Minimizada</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <aside class="sidebar" id="sidebar" aria-label="Barra lateral">
+    <div class="sidebar__top">
+      <div class="brand">
+        <span class="brand__icon" aria-hidden="true">🧩</span>
+        <span class="brand__name">Protótipo</span>
+      </div>
+
+      <button id="toggleSidebar"
+              class="toggle"
+              aria-label="Minimizar/expandir sidebar"
+              aria-controls="sidebar"
+              aria-expanded="true"
+              title="Minimizar/expandir">
+        ☰
+      </button>
+    </div>
+
+    <nav class="nav">
+      <button class="nav__item" title="Seção 1">
+        <span class="icon" aria-hidden="true">🏠</span>
+        <span class="label">Pagina Inicial</span>
+      </button>
+      <button class="nav__item" title="Seção 2">
+        <span class="icon" aria-hidden="true">📄</span>
+        <span class="label">Artigos</span>
+      </button>
+      <button class="nav__item" title="Seção 3">
+        <span class="icon" aria-hidden="true">📊</span>
+        <span class="label">Videos</span>
+      </button>
+      <button class="nav__item" title="Seção 4">
+        <span class="icon" aria-hidden="true">⚙️</span>
+        <span class="label">Testes</span>
+      </button>
+    </nav>
+  </aside>
+
+  <main class="content" id="main">
+    <header class="content__header">
+      <h1>Protótipo de Página</h1>
+      <p>Sidebar minimizável com botões de seções (sem navegação real).</p>
+    </header>
+
+    <section class="card">
+      <h2>Área de Conteúdo</h2>
+      <p>
+        Use o botão ☰ para minimizar/expandir a barra lateral. Os botões são
+        apenas visuais para o protótipo.
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

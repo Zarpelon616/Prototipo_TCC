@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Protótipo - Sidebar Dupla</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sidebar esquerda -->
+  <aside class="sidebar" id="sidebar" aria-label="Menu principal">
+    <div class="sidebar__top">
+      <div class="brand">
+        <span class="brand__icon" aria-hidden="true">🔒</span>
+        <span class="brand__name">Protótipo</span>
+      </div>
+
+      <button id="toggleSidebar"
+              class="toggle"
+              aria-label="Minimizar/expandir menu"
+              aria-controls="sidebar"
+              aria-expanded="true"
+              title="Minimizar/expandir">
+        ☰
+      </button>
+    </div>
+
+    <nav class="nav">
+      <button class="nav__item" title="Seção 1">
+        <span class="icon" aria-hidden="true">🏠</span>
+        <span class="label">Pagina Inicial</span>
+      </button>
+      <button class="nav__item" title="Seção 2">
+        <span class="icon" aria-hidden="true">📄</span>
+        <span class="label">Artigos</span>
+      </button>
+      <button class="nav__item" title="Seção 3">
+        <span class="icon" aria-hidden="true">🎥</span>
+        <span class="label">Videos</span>
+      </button>
+      <button class="nav__item" title="Seção 4">
+        <span class="icon" aria-hidden="true">📝</span>
+        <span class="label">Testes</span>
+      </button>
+    </nav>
+  </aside>
+
+  <!-- Conteúdo -->
+  <main class="content" id="main">
+    <header class="content__header">
+      <h1>Protótipo de Página</h1>
+      <p>Sidebars minimizáveis: menu à esquerda, usuário à direita.</p>
+    </header>
+
+    <section class="card">
+      <h2>Área de Conteúdo</h2>
+      <p>Use os botões ☰ para minimizar/expandir as sidebars.</p>
+      <p>Mostraria informações relevantes envolvendo cybersegurança como noticias talvez</p>
+    </section>
+  </main>
+
+  <!-- Sidebar direita (usuário) -->
+  <aside class="userbar" id="userbar" aria-label="Painel do usuário">
+    <div class="userbar__top">
+      <div class="user-info">
+        <img src="https://i.pravatar.cc/100?img=12" alt="Avatar" class="avatar">
+        <span class="username">Usuário</span>
+      </div>
+
+      <button id="toggleUserbar"
+              class="toggle"
+              aria-label="Minimizar/expandir usuário"
+              aria-controls="userbar"
+              aria-expanded="true"
+              title="Minimizar/expandir">
+        ☰
+      </button>
+    </div>
+
+    <nav class="nav">
+      <button class="nav__item">
+        <span class="icon">👤</span>
+        <span class="label">Meu Perfil</span>
+      </button>
+      <button class="nav__item">
+        <span class="icon">📈</span>
+        <span class="label">Progresso</span>
+      </button>
+      <button class="nav__item">
+        <span class="icon">🚪</span>
+        <span class="label">Sair</span>
+      </button>
+    </nav>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
