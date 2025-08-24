@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Protótipo - Sidebar Dupla</title>
+  <title>Artigos - Protótipo</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Sidebar esquerda -->
   <aside class="sidebar" id="sidebar" aria-label="Menu principal">
     <div class="sidebar__top">
       <div class="brand">
@@ -26,40 +25,61 @@
     </div>
 
     <nav class="nav">
-      <button href="index.html" class="nav__item" title="Seção 1">
+      <a href="index.html" class="nav__item" title="Seção 1">
         <span class="icon" aria-hidden="true">🏠</span>
-        <span class="label">Pagina Inicial</span>
-      </button>
-      <button href="artigos.html" class="nav__item" title="Seção 2">
+        <span class="label">Página Inicial</span>
+      </a>
+      <a href="artigos.html" class="nav__item" title="Seção 2">
         <span class="icon" aria-hidden="true">📄</span>
         <span class="label">Artigos</span>
-      </button>
-      <button class="nav__item" title="Seção 3">
+      </a>
+      <a href="#" class="nav__item" title="Seção 3">
         <span class="icon" aria-hidden="true">🎥</span>
-        <span class="label">Videos</span>
-      </button>
-      <button class="nav__item" title="Seção 4">
+        <span class="label">Vídeos</span>
+      </a>
+      <a href="#" class="nav__item" title="Seção 4">
         <span class="icon" aria-hidden="true">📝</span>
         <span class="label">Testes</span>
-      </button>
+      </a>
     </nav>
   </aside>
 
-  <!-- Conteúdo -->
   <main class="content" id="main">
     <header class="content__header">
-      <h1>Protótipo de Página</h1>
-      <p>Sidebars minimizáveis: menu à esquerda, usuário à direita.</p>
+      <h1>Artigos</h1>
+      <p>Confira nossos últimos artigos sobre cibersegurança e tecnologia.</p>
     </header>
 
-    <section class="card">
-      <h2>Área de Conteúdo</h2>
-      <p>Use os botões ☰ para minimizar/expandir as sidebars.</p>
-      <p>Mostraria informações relevantes envolvendo cybersegurança como noticias talvez</p>
+    <section class="articles-grid">
+      <div class="article-card">
+        <img src="https://via.placeholder.com/400x250" alt="Imagem do Artigo 1" class="article-image">
+        <div class="article-info">
+          <h3>A importância do 2FA</h3>
+          <p>Saiba por que a autenticação de dois fatores é crucial para proteger suas contas online.</p>
+          <a href="#" class="read-more">Ler mais &rarr;</a>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <img src="https://via.placeholder.com/400x250" alt="Imagem do Artigo 2" class="article-image">
+        <div class="article-info">
+          <h3>Phishing: Como se proteger</h3>
+          <p>Descubra as táticas mais comuns de phishing e aprenda a identificar e-mails maliciosos.</p>
+          <a href="#" class="read-more">Ler mais &rarr;</a>
+        </div>
+      </div>
+      
+      <div class="article-card">
+          <img src="https://via.placeholder.com/400x250" alt="Imagem do Artigo 3" class="article-image">
+          <div class="article-info">
+            <h3>Malware: Tipos e Prevenção</h3>
+            <p>Uma introdução aos diferentes tipos de malware e as melhores práticas para evitá-los.</p>
+            <a href="#" class="read-more">Ler mais &rarr;</a>
+          </div>
+        </div>
     </section>
   </main>
 
-  <!-- Sidebar direita (usuário) -->
   <aside class="userbar" id="userbar" aria-label="Painel do usuário">
     <div class="userbar__top">
       <div class="user-info">
@@ -78,18 +98,18 @@
     </div>
 
     <nav class="nav">
-      <button class="nav__item">
+      <a href="#" class="nav__item">
         <span class="icon">👤</span>
         <span class="label">Meu Perfil</span>
-      </button>
-      <button class="nav__item">
+      </a>
+      <a href="#" class="nav__item">
         <span class="icon">📈</span>
         <span class="label">Progresso</span>
-      </button>
-      <button class="nav__item">
+      </a>
+      <a href="#" class="nav__item">
         <span class="icon">🚪</span>
         <span class="label">Sair</span>
-      </button>
+      </a>
     </nav>
   </aside>
 

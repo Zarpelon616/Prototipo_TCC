@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+#content {
+    margin-left: 250px;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #333;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.article-option {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.article-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+.article-option p {
+    margin: 0;
+    color: #555;
+}
+
+#sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding-top: 20px;
+    height: 100vh;
+    position: fixed;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s, margin-left 0.3s;
+}
+
+#sidebar.minimized {
+    width: 60px; /* Largura menor quando minimizada */
+}
+
+#sidebar.minimized .sidebar-header h3,
+#sidebar.minimized a {
+    display: none; /* Oculta texto e links quando minimizada */
+}
+
+#sidebar.minimized .sidebar-header button {
+    margin-right: 0;
+}
+
+#sidebar.minimized .sidebar-header {
+    border-bottom: none;
+}
+
+/* Estilo para o botão de minimizar */
+#toggle-btn-esquerda,
+#toggle-btn-direita {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#toggle-btn-esquerda {
+    transform: rotate(0deg);
+}
+
+#sidebar.minimized #toggle-btn-esquerda {
+    transform: rotate(180deg);
+}
+
+.sidebar-header {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #4a6680;
+    margin-bottom: 10px;
+}
+
+#sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ecf0f1;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+#sidebar a:hover, #sidebar a.active {
+    background-color: #34495e;
+}
+
+#sidebar a i {
+    margin-right: 10px;
+}
+
+#content {
+    margin-left: 250px;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #333;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* Estilo para a barra lateral direita */
+#sidebar-direita {
+    width: 200px;
+    background-color: #fff;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: width 0.3s, margin-right 0.3s;
+}
+
+#sidebar-direita.minimized {
+    width: 60px; /* Largura menor quando minimizada */
+}
+
+#sidebar-direita.minimized .perfil-usuario,
+#sidebar-direita.minimized .icones-usuario {
+    display: none; /* Oculta conteúdo quando minimizada */
+}
+
+#toggle-btn-direita {
+    transform: rotate(0deg);
+}
+
+#sidebar-direita.minimized #toggle-btn-direita {
+    transform: rotate(180deg);
+}
+
+/* Ajustes no conteúdo para não ficar por baixo das barras minimizadas */
+#content {
+    /* ... seu código existente ... */
+    transition: margin-left 0.3s, margin-right 0.3s;
+}
+
+.minimized-content {
+    margin-left: 60px;
+}
+
+.perfil-usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.foto-usuario {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.nome-usuario {
+    font-weight: bold;
+    color: #333;
+}
+
+.icones-usuario a {
+    color: #555;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
