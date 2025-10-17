@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Cibersegurança</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    
+    <!-- SIDEBAR ESQUERDA -->
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+            <button id="toggle-btn-esquerda" type="button">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        </div>
+        <a href="index.html">Página Inicial</a>
+        <a href="artigos.html">Artigos</a>
+        <a href="videos.html" class="active">Vídeos <i class="fas fa-play-circle"></i></a>
+        <a href="testes.html">Testes <i class="fas fa-tasks"></i></a>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div id="content">
+        <h1>Quiz de Cibersegurança 🔐</h1>
+        <p>Responda as perguntas abaixo e teste seus conhecimentos!</p>
+
+        <form id="quizForm">
+            <div class="question">
+                <h3>1. O que é phishing?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> Um tipo de software antivírus</label>
+                    <label><input type="radio" name="q1" value="b"> Um golpe que tenta enganar o usuário para obter dados pessoais</label>
+                    <label><input type="radio" name="q1" value="c"> Uma técnica de criptografia</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>2. Qual dessas senhas é mais segura?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> 123456</label>
+                    <label><input type="radio" name="q2" value="b"> Senha123</label>
+                    <label><input type="radio" name="q2" value="c"> G@rR4f@2025!</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>3. O que é autenticação de dois fatores (2FA)?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> Um antivírus adicional</label>
+                    <label><input type="radio" name="q3" value="b"> Um método que exige duas formas de verificação de identidade</label>
+                    <label><input type="radio" name="q3" value="c"> Um tipo de firewall</label>
+                </div>
+            </div>
+
+            <button type="button" id="submit">Enviar Respostas</button>
+            <div id="result"></div>
+        </form>
+    </div>
+
+    <!-- SIDEBAR DIREITA -->
+    <aside id="sidebar-direita" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Usuário</h3>
+            <button id="toggle-btn-direita" type="button">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="perfil-usuario">
+            <img src="https://i.pravatar.cc/100?img=12" alt="Foto do Usuário" class="foto-usuario">
+            <span class="nome-usuario">Nome do Usuário</span>
+        </div>
+        <div class="icones-usuario">
+            <a href="#">Meu perfil <i class="fas fa-user-circle"></i></a>
+        </div>
+    </aside>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

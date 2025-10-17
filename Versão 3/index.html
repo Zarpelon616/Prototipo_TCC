@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial - Protótipo</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial - Cibersegurança</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    
-    <div id="sidebar">
-        <div class="sidebar-header">
-            <h3>Menu</h3>
-            <button id="toggle-btn-esquerda">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-        </div>
-        <a href="index.html" class="active">Página Inicial</a>
-        <a href="artigos.html">Artigos</a>
-        <a href="videos.html">Videos <i class="fas fa-play-circle"></i></a>
-        <a href="testes.html">Testes <i class="fas fa-tasks"></i></a>
+
+  <!-- SIDEBAR ESQUERDA -->
+  <div id="sidebar">
+    <div class="sidebar-header">
+      <h3>Menu</h3>
+      <button id="toggle-btn-esquerda">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+    </div>
+    <a href="index.html" class="active"><i class="fas fa-home"></i>  Início</a>
+    <a href="artigos.html"><i class="fas fa-file-alt"></i>  Artigos</a>
+    <a href="videos.html"><i class="fas fa-play-circle"></i> Vídeos</a>
+    <a href="testes.html"><i class="fas fa-tasks"></i> Testes</a>
+  </div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div id="content">
+    <h1>Bem-vindo ao Portal de Cibersegurança 🔐</h1>
+    <p>Explore artigos, vídeos e testes para aumentar seus conhecimentos sobre segurança digital!</p>
+  </div>
+
+  <!-- SIDEBAR DIREITA -->
+  <aside id="sidebar-direita">
+    <div class="sidebar-header">
+      <h3>Usuário</h3>
+      <button id="toggle-btn-direita">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
 
-    <div id="content">
-        <h1>Bem-vindo!</h1>
-        <p>Este é o conteúdo da sua página inicial.</p>
+    <div class="perfil-usuario">
+      <img src="https://i.pravatar.cc/100?img=12" alt="Foto do Usuário" class="foto-usuario">
+      <span class="nome-usuario">Nome do Usuário</span>
     </div>
 
-    <aside id="sidebar-direita">
-        <div class="sidebar-header">
-            <h3>Usuário</h3>
-            <button id="toggle-btn-direita">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-        <div class="perfil-usuario">
-            <img src="https://i.pravatar.cc/100?img=12" alt="Foto do Usuário" class="foto-usuario">
-            <span class="nome-usuario">Nome do Usuário</span>
-        </div>
-        <div class="icones-usuario">
-            <a href="#">Meu perfil <i class="fas fa-user-circle"></i></a>
-        </div>
-    </aside>
+    <div class="icones-usuario">
+      <a href="#"><i class="fas fa-user-circle"></i> Meu Perfil</a>
+      <a href="#"><i class="fas fa-cog"></i> Configurações</a>
+    </div>
+  </aside>
 
-    <script src="script.js"></script>
-
+  <script src="script.js" defer></script>
 </body>
 </html>
