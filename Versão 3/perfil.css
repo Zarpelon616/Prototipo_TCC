@@ -66,3 +66,32 @@ textarea{min-height:90px}
 /* Classes when sidebars minimized (JS will toggle body classes) */
 body.sidebar-left-minimized main{margin-left:60px}
 body.sidebar-right-minimized main{margin-right:60px}
+
+.progress-section {
+  margin-top: 25px;
+  background: #1e1e2e;
+  padding: 16px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.progress-item {
+  margin-top: 10px;
+}
+
+.progress-bar {
+  background: #333;
+  border-radius: 8px;
+  height: 12px;
+  width: 100%;
+  overflow: hidden;
+  margin: 6px 0;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #00bcd4, #2196f3);
+  height: 100%;
+  width: 0%;
+  border-radius: 8px;
+  transition: width 0.6s ease-in-out;
+}

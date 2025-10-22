@@ -3,49 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Perfil do Usuário — Prototipo</title>
+  <title>Perfil do Usuário — Protótipo</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="perfil.css">   
+  <link rel="stylesheet" href="perfil.css">
 </head>
 <body>
-  <!-- LEFT SIDEBAR -->
+  <!-- SIDEBAR ESQUERDA -->
   <div id="sidebar">
     <div class="sidebar-header">
       <h3>Menu</h3>
-      <button id="toggle-btn-esquerda" aria-label="Minimizar menu esquerdo"><i class="fas fa-chevron-left"></i></button>
+      <button id="toggle-btn-esquerda"><i class="fas fa-chevron-left"></i></button>
     </div>
-    <a href="index.html" class="active"><i class="fas fa-home"></i> Início</a>
+    <a href="index.html"><i class="fas fa-home"></i> Início</a>
     <a href="artigos.html"><i class="fas fa-file-alt"></i> Artigos</a>
     <a href="videos.html"><i class="fas fa-play-circle"></i> Vídeos</a>
     <a href="testes.html"><i class="fas fa-tasks"></i> Testes</a>
   </div>
 
-  <!-- RIGHT SIDEBAR -->
+  <!-- SIDEBAR DIREITA -->
   <aside id="sidebar-direita">
-    <button id="toggle-btn-direita" aria-label="Minimizar painel direito"><i class="fas fa-chevron-right"></i></button>
-    <div class="perfil-usuario" style="margin-top:14px">
+    <button id="toggle-btn-direita"><i class="fas fa-chevron-right"></i></button>
+    <div class="perfil-usuario">
       <img src="https://i.pravatar.cc/150?img=12" alt="Foto do usuário" class="foto-usuario">
       <div class="nome-usuario">Murilo Z.</div>
       <div class="role">Desenvolvedor / Estudante</div>
     </div>
-    <div class="icones-usuario" style="margin-top:10px;display:flex;gap:8px">
+    <div class="icones-usuario">
       <a href="https://github.com/Zarpelon616" title="GitHub"><i class="fab fa-github"></i></a>
       <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
       <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
     </div>
   </aside>
 
-  <!-- MAIN CONTENT -->
+  <!-- CONTEÚDO PRINCIPAL -->
   <main>
     <div class="container">
       <div class="profile-card" id="profileCard">
         <div class="avatar">
           <img id="profilePhoto" src="https://i.pravatar.cc/400?img=12" alt="Avatar do usuário">
         </div>
+
         <div>
           <h2 id="profileName">Murilo Zarpelon</h2>
-          <div class="role" id="profileRole">Desenvolvedor Front-end</div>
-          <p class="bio" id="profileBio">Apaixonado por interfaces limpas, UX e por construir coisas que simplificam a vida das pessoas. Estudando integração entre design e código.</p>
+          <div id="profileRole" class="role">Desenvolvedor Front-end</div>
+          <p id="profileBio" class="bio">
+            Apaixonado por interfaces limpas, UX e por construir coisas que simplificam a vida das pessoas.
+          </p>
 
           <div class="profile-meta">
             <div class="meta">📍 São Paulo, BR</div>
@@ -58,11 +61,13 @@
             <button class="btn btn-outline" id="downloadBtn"><i class="fas fa-download"></i> Baixar CV</button>
           </div>
 
-          <div class="edit-panel" id="editPanel" style="display:none">
+          <!-- Painel de edição (adicionado de volta) -->
+          <div class="edit-panel" id="editPanel" style="display:none; margin-top:20px">
             <div style="display:flex;justify-content:space-between;align-items:center">
               <strong>Editar perfil</strong>
               <button id="closeEdit" style="border:0;background:transparent;cursor:pointer"><i class="fas fa-times"></i></button>
             </div>
+
             <div class="form-row" style="margin-top:12px">
               <div class="field">
                 <label>Nome</label>
@@ -73,19 +78,42 @@
                 <input type="text" id="inputRole" value="Desenvolvedor Front-end">
               </div>
             </div>
+
             <div style="margin-top:10px">
               <label>Bio</label>
-              <textarea id="inputBio">Apaixonado por interfaces limpas, UX e por construir coisas que simplificam a vida das pessoas. Estudando integração entre design e código.</textarea>
+              <textarea id="inputBio">Apaixonado por interfaces limpas, UX e por construir coisas que simplificam a vida das pessoas.</textarea>
             </div>
+
             <div style="margin-top:10px;display:flex;gap:8px">
               <button class="btn btn-primary" id="saveBtn">Salvar</button>
               <button class="btn btn-outline" id="cancelBtn">Cancelar</button>
             </div>
           </div>
 
+          <!-- Seção de Progresso -->
+          <section class="progress-section" style="margin-top:30px">
+            <h3><i class="fas fa-chart-line"></i> Progresso do Usuário</h3>
+
+            <div class="progress-item">
+              <span>Artigos lidos</span>
+              <div class="progress-bar"><div id="progressArtigos" class="progress-fill"></div></div>
+              <span id="percentArtigos">0%</span>
+            </div>
+
+            <div class="progress-item">
+              <span>Vídeos assistidos</span>
+              <div class="progress-bar"><div id="progressVideos" class="progress-fill"></div></div>
+              <span id="percentVideos">0%</span>
+            </div>
+
+            <div class="progress-item">
+              <span>Desempenho nos testes</span>
+              <div class="progress-bar"><div id="progressTestes" class="progress-fill"></div></div>
+              <span id="percentTestes">0%</span>
+            </div>
+          </section>
         </div>
       </div>
-
     </div>
   </main>
 

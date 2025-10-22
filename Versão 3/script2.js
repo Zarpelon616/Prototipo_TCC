@@ -51,3 +51,34 @@ downloadBtn.addEventListener('click', ()=>{
     a.href = url; a.download = 'CV.txt';
     document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
 });
+
+// Simulação de dados de progresso
+// (em um projeto real, esses valores viriam do servidor)
+const progresso = JSON.parse(localStorage.getItem('progressoUsuario')) || {
+  artigos: 40,  // porcentagem de artigos lidos
+  videos: 65,   // porcentagem de vídeos assistidos
+  testes: 80    // desempenho médio nos quizzes
+};
+
+function atualizarProgresso() {
+  const artigos = document.getElementById('progressArtigos');
+  const videos = document.getElementById('progressVideos');
+  const testes = document.getElementById('progressTestes');
+
+  artigos.style.width = progresso.artigos + '%';
+  videos.style.width = progresso.videos + '%';
+  testes.style.width = progresso.testes + '%';
+
+  document.getElementById('percentArtigos').textContent = progresso.artigos + '%';
+  document.getElementById('percentVideos').textContent = progresso.videos + '%';
+  document.getElementById('percentTestes').textContent = progresso.testes + '%';
+}
+
+atualizarProgresso();
+
+// Exemplo de atualização de progresso (poderia vir das outras páginas)
+function registrarProgresso(tipo, valor) {
+  progresso[tipo] = Math.min(100, valor);
+  localStorage.setItem('progressoUsuario', JSON.stringify(progresso));
+  atualizarProgresso();
+}

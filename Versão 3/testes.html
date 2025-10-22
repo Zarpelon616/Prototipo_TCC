@@ -17,49 +17,94 @@
                 <i class="fas fa-chevron-left"></i>
             </button>
         </div>
-        <a href="index.html">Inicio</a>
-        <a href="artigos.html">Artigos</a>
-        <a href="videos.html" class="active">Vídeos <i class="fas fa-play-circle"></i></a>
-        <a href="testes.html">Testes <i class="fas fa-tasks"></i></a>
+    <a href="index.html"><i class="fas fa-home"></i> Início</a>
+    <a href="artigos.html"><i class="fas fa-file-alt"></i> Artigos</a>
+    <a href="videos.html"><i class="fas fa-play-circle"></i> Vídeos</a>
+    <a href="testes.html"><i class="fas fa-tasks"></i> Testes</a>
     </div>
 
-    <!-- CONTEÚDO PRINCIPAL -->
-    <div id="content">
-        <h1>Quiz de Cibersegurança 🔐</h1>
-        <p>Responda as perguntas abaixo e teste seus conhecimentos!</p>
+<!-- CONTEÚDO PRINCIPAL -->
+  <div id="content">
+    <h1>Quiz de Cibersegurança 🔐</h1>
+    <p>Teste seus conhecimentos e veja o quanto você entende sobre segurança digital!</p>
 
-        <form id="quizForm">
-            <div class="question">
-                <h3>1. O que é phishing?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q1" value="a"> Um tipo de software antivírus</label>
-                    <label><input type="radio" name="q1" value="b"> Um golpe que tenta enganar o usuário para obter dados pessoais</label>
-                    <label><input type="radio" name="q1" value="c"> Uma técnica de criptografia</label>
-                </div>
-            </div>
+    <form id="quizForm">
+      <div class="question">
+        <h3>1. O que é phishing?</h3>
+        <div class="options">
+          <label><input type="radio" name="q1" value="a"> Um tipo de firewall</label>
+          <label><input type="radio" name="q1" value="b"> Um golpe que tenta enganar o usuário para obter dados pessoais</label>
+          <label><input type="radio" name="q1" value="c"> Um software antivírus</label>
+        </div>
+      </div>
 
-            <div class="question">
-                <h3>2. Qual dessas senhas é mais segura?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q2" value="a"> 123456</label>
-                    <label><input type="radio" name="q2" value="b"> Senha123</label>
-                    <label><input type="radio" name="q2" value="c"> G@rR4f@2025!</label>
-                </div>
-            </div>
+      <div class="question">
+        <h3>2. Qual dessas senhas é mais segura?</h3>
+        <div class="options">
+          <label><input type="radio" name="q2" value="a"> Senha123</label>
+          <label><input type="radio" name="q2" value="b"> G@rR4f@2025!</label>
+          <label><input type="radio" name="q2" value="c"> qwerty</label>
+        </div>
+      </div>
 
-            <div class="question">
-                <h3>3. O que é autenticação de dois fatores (2FA)?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q3" value="a"> Um antivírus adicional</label>
-                    <label><input type="radio" name="q3" value="b"> Um método que exige duas formas de verificação de identidade</label>
-                    <label><input type="radio" name="q3" value="c"> Um tipo de firewall</label>
-                </div>
-            </div>
+      <div class="question">
+        <h3>3. O que é autenticação de dois fatores (2FA)?</h3>
+        <div class="options">
+          <label><input type="radio" name="q3" value="a"> Um método que exige duas formas de verificação de identidade</label>
+          <label><input type="radio" name="q3" value="b"> Um software de proteção de rede</label>
+          <label><input type="radio" name="q3" value="c"> Um protocolo de criptografia</label>
+        </div>
+      </div>
 
-            <button type="button" id="submit">Enviar Respostas</button>
-            <div id="result"></div>
-        </form>
-    </div>
+      <div class="question">
+        <h3>4. Qual destas opções é o sinal mais claro de um e-mail de phishing?</h3>
+        <div class="options">
+          <label><input type="radio" name="q4" value="a"> Erros gramaticais e pedido urgente de informações pessoais</label>
+          <label><input type="radio" name="q4" value="b"> Um anexo com fatura de compra recente</label>
+          <label><input type="radio" name="q4" value="c"> Saudação com o seu nome correto</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>5. Qual é o principal objetivo de um ransomware?</h3>
+        <div class="options">
+          <label><input type="radio" name="q5" value="a"> Roubar credenciais bancárias</label>
+          <label><input type="radio" name="q5" value="b"> Criptografar arquivos e exigir pagamento para liberá-los</label>
+          <label><input type="radio" name="q5" value="c"> Espionar mensagens de e-mail</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>6. O que é um ataque DDoS?</h3>
+        <div class="options">
+          <label><input type="radio" name="q6" value="a"> Um ataque que força o servidor a ficar inacessível por sobrecarga de tráfego</label>
+          <label><input type="radio" name="q6" value="b"> Um método de roubo de senhas</label>
+          <label><input type="radio" name="q6" value="c"> Um tipo de vírus autorreplicante</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>7. Qual dessas práticas é mais segura ao usar Wi-Fi público?</h3>
+        <div class="options">
+          <label><input type="radio" name="q7" value="a"> Acessar o banco online</label>
+          <label><input type="radio" name="q7" value="b"> Usar VPN e evitar inserir dados pessoais</label>
+          <label><input type="radio" name="q7" value="c"> Fazer login em todas as suas contas para “atualizar a sessão”</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>8. O que significa o cadeado ao lado da URL no navegador?</h3>
+        <div class="options">
+          <label><input type="radio" name="q8" value="a"> O site possui certificado SSL e usa conexão segura (HTTPS)</label>
+          <label><input type="radio" name="q8" value="b"> O site é 100% confiável</label>
+          <label><input type="radio" name="q8" value="c"> O site está em modo anônimo</label>
+        </div>
+      </div>
+
+      <button type="button" id="submit">Enviar Respostas</button>
+      <div id="result"></div>
+    </form>
+  </div>
 
     <!-- SIDEBAR DIREITA -->
     <aside id="sidebar-direita" class="sidebar">
